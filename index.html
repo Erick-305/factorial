@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <h1>Factorial</h1>
+    <h1>Erick Mejia</h1>
+
+    <script>
+// Pedimos al usuario que introduzca el número de factorial que desee ingresar
+var n = prompt("Ingrese un numero factorial que desee:");
+// Inicializamos el total en 1 para el cálculo del factorial
+var total = 1; 
+// Variable para almacenar la cadena de multiplicación
+var cadena = "";  
+
+// Bucle que va desde 1 hasta el número introducido por el usuario (n)
+for (var i = 1; i <= n; i++) {
+    // Calculamos el factorial multiplicando el total por el valor actual de i
+    total = total * i;  
+    
+    // cadena de los valores en formato de multiplicación (ej: "1 * 2 * 3 * ...")
+    cadena += (i === 1) ? i : " * " + i;
+}
+
+// Imprimimos el resultado en formato: "Factorial de n: 1 * 2 * 3 * ... = total"
+console.log("Factorial de " + n + ": " + cadena + " = " + total);
+    </script>
+</body>
+</html>
